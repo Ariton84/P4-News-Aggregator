@@ -1,14 +1,6 @@
 <?php
 /**
- * feed_view.php is the RSS feed view page for the RSS feed application
- *
- * The difference between demo_list.php and survey_list.php is the reference to the 
- * Pager class which processes a mysqli SQL statement and spans records across multiple  
- * pages. 
- *
- * The associated view page, survey_view.php is virtually identical to demo_view.php. 
- * The only difference is the pager version links to the list pager version to create a 
- * separate application from the original list/view. 
+ * feed_view.php 
  * 
  * @package 
  * @author Vanver Brown 
