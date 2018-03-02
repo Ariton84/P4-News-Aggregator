@@ -48,11 +48,11 @@ $next = '<img src="' . VIRTUAL_PATH . 'images/arrow_next.gif" border="0" />';
 $myPager = new Pager(10,'',$prev,$next,'');
 $sql = $myPager->loadSQL($sql);  #load SQL, add offset
 
-# connection comes first in mysqli (improved) function
-$result = mysqli_query(IDB::conn(),$sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
+# connection comes first in mysql (improved) function
+$result = mysql_query(IDB::conn(),$sql) or die(trigger_error(mysql_error(IDB::conn()), E_USER_ERROR));
 
 # if we have records, process them
-if(mysqli_num_rows($result) > 0){
+if(mysql_num_rows($result) > 0){
 	if($myPager->showTotal()==1){$itemz = "category";}else{$itemz = "categories";}  //deal with plural
     echo '<div align="center">We have ' . $myPager->showTotal() . ' ' . $itemz . '!</div>';
 	
@@ -70,7 +70,7 @@ if(mysqli_num_rows($result) > 0){
 	'; #end echo
 	
 	# process each row
-	while($row = mysqli_fetch_assoc($result)){
+	while($row = mysql_fetch_assoc($result)){
 
 		echo '
 			<tr>
@@ -89,10 +89,10 @@ if(mysqli_num_rows($result) > 0){
 	echo $myPager->showNAV(); # show paging nav, only if enough records	 
 }else{#no records
     echo "<div align=center>What! No feeds?  There must be a mistake!!</div>";	
-} #end if(mysqli_num_rows($result) > 0)
+} #end if(mysql_num_rows($result) > 0)
 
 #release the data
-@mysqli_free_result($result);
+@mysql_free_result($result);
 
 get_footer(); #defaults to theme footer or footer_inc.php
 ?>
