@@ -17,7 +17,10 @@
 
 require '../inc_0700/config_inc.php'; #provides configuration, pathing, error handling, db credentials
 spl_autoload_register('MyAutoLoader::NamespaceLoader');//required to load SurveySez namespace objects
-$config->metaRobots = 'no index, no follow';#never index survey pages
+$config->metaRobots = 'no index, no follow';#never index survey pages 
+ 
+What does line #20 doing here ? Does to check the array for ['FeedID'] and ['FeedTitle'] ? 
+	
 
 # check variable of item passed in - if invalid data, forcibly redirect back to demo_list.php page
 if(isset($_GET['id']) && (int)$_GET['id'] > 0){#proper data must be on querystring
