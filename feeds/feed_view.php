@@ -55,15 +55,15 @@ if(!isset($_SESSION['Feeds'])){
 }
 
 
-# connection comes first in mysql (improved) function
-$result = mysql_query(IDB::conn(),$sql) or die(trigger_error(mysql_error(IDB::conn()), E_USER_ERROR));
+# connection comes first in mysqli (improved) function
+$result = mysqli_query(IDB::conn(),$sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
 
 
-if(mysql_num_rows($result) > 0)
+if(mysqli_num_rows($result) > 0)
 {#records exist - process
 	
 	# there should only be one row so I don't think we need a loop
-	$row = mysql_fetch_assoc($result);
+	$row = mysqli_fetch_assoc($result);
 	
 	#setup the RSS stuff
 	$cacheTTL = 10 * 60; #this the cache time to live in seconds. If the cache is older than this we need to refresh
@@ -126,10 +126,10 @@ if(mysql_num_rows($result) > 0)
 
 }else{#no records
     echo "<div align=center>What! No feeds?  There must be a mistake!</div>";	
-}#end if(mysql_num_rows($result) > 0)
+}#end if(mysqli_num_rows($result) > 0)
 
 #release the data
-@mysql_free_result($result);
+@mysqli_free_result($result);
 
 get_footer(); #defaults to theme footer or footer_inc.php
 
