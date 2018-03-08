@@ -119,7 +119,7 @@ FeedCategoryID,
 FeedCategoryName,
 FeedCategoryDescription
 )
-values(NULL,'Technology','Cusrrent Technology News');
+values(NULL,'Technology','Cusrrent Technology News', );
 
 insert into wn18_FeedCategories(
 FeedCategoryID,
@@ -134,3 +134,74 @@ FeedCategoryName,
 FeedCategoryDescription
 )
 values(NULL,'Entertainment', 'Current Entertainment News');
+
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+values(NULL,'Apple Park: Transcript of 911 calls about injuries from walking into glass',1,'Three 911 calls were made from Apple Park','https://www.sfchronicle.com/business/article/Apple-Park-Transcript-of-911-calls-about-12723602.php', NOW());
+
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+values(NULL,'Galaxy S9 Vs Galaxy S8: Whats The Difference?',1,'The Galaxy S9 is here ','https://www.forbes.com/sites/gordonkelly/2018/03/04/samsung-galaxy-s9-vs-galaxy-s8-whats-the-difference/#48fc1bb87629', NOW());
+       
+       
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+values(NULL,'YouTube tests new feature',1,'YouTube tests new feature that replaces video background images','https://mashable.com/2018/03/04/youtube-stories-green-screen/#FZ53A9DKhmqm', NOW());   
+
+
+
+
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+values(NULL,'Science Science News',3,'Science News Technology Space NASA Artificial Intelligence Weird Science Science of Sci-Fi
+Human Brains Stop Creating New Neurons in Adulthood','https://news.google.com/news/headlines/section/topic/SCIENCE?ned=us&hl=en&gl=US', NOW());   
+
+
+
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+values(NULL,'Deep gas bands, shapely cyclones',3,'NASA's Juno reveals more of Jupiter's secrets','https://news.google.com/news/headlines/section/topic/SCIENCE?ned=us&hl=en&gl=US', NOW());          
+       
+       
+       
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+values(NULL,'China’s 9½-ton space lab will soon crash to Earth',3,'Scientists think they know where — sort of.','https://news.google.com/news/headlines/section/topic/SCIENCE?ned=us&hl=en&gl=US', NOW());          
+       
+       
