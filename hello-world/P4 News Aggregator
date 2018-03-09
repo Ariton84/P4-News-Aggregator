@@ -1,1 +1,32 @@
+#Ethan
+#Entertainment
 
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+Values(Null,'Movie Review', 2, 'New Movies', 'https://news.google.com/news/rss/search/section/q/review/review?hl=en&gl=US&ned=us',NOW()); 
+
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+Values(Null,'Oscars',2, 'Red Carpet', 'https://news.google.com/news/rss/search/section/q/oscar%20winners/oscar%20winners?hl=en&gl=US&ned=us',NOW()); 
+
+insert into wn18_Feeds(
+FeedID,
+FeedTitle,
+FeedCategoryID,
+FeedDescription,
+FeedLink,
+FeedDateTime
+)
+Values(Null,'Netflix Shows',2, 'New Shows', 'https://news.google.com/news/rss/search/section/q/netflix%20best%20shows/netflix%20best%20shows?hl=en&gl=US&ned=us',NOW()); 
